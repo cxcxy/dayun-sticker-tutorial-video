@@ -1,4 +1,4 @@
 interface:
   display_name: "大昀手绘贴纸风教程视频"
-  short_description: "复用 Muse 零基础教程的组件 C 开场、贴纸风录屏卡、逐句字幕和真实录屏流程"
-  default_prompt: "Use $dayun-sticker-tutorial-video to make a horizontal software tutorial in the Muse episode sticker style, with real window recordings, camera moves and synced captions."
+  short_description: "组件 C 开场、贴纸风录屏卡、逐句字幕和真实录屏的横版软件教程"
+  default_prompt: "Use $dayun-sticker-tutorial-video to make a horizontal software tutorial in the hand-drawn sticker style, with real window recordings, camera moves and synced captions."

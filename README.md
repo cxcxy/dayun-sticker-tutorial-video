@@ -1,6 +1,6 @@
 # dayun-sticker-tutorial-video
 
-用《Muse 零基础教程》同款**手绘贴纸风**制作横版软件教程视频的 Agent Skill：米白噪点纸底、黄紫立体贴纸字、粗描边硬投影的录屏卡，录屏里推近拉远，底部白底黑边逐句字幕。
+用**手绘贴纸风**制作横版软件教程视频的 Agent Skill：米白噪点纸底、黄紫立体贴纸字、粗描边硬投影的录屏卡，录屏里推近拉远，底部白底黑边逐句字幕。
 
 ![样张](assets/example/style-sheet.jpg)
 
@@ -21,7 +21,7 @@
 | `references/scene-playbook.md` | 各类场景怎么搭、镜头怎么写 |
 | `references/pitfalls.md` | 实际制作中踩过的坑 |
 | `assets/template/parts.tsx` | 录屏卡、强调贴纸、板书组件、简笔图 |
-| `assets/example/MuseEpisode.tsx` | 一整期的场景表范例 |
+| `assets/example/ExampleEpisode.tsx` | 一整期的场景表范例 |
 | `scripts/` | 窗口录屏、字幕对齐、缩略拼图、静帧检查、切块上传 |
 
 ## 安装
@@ -33,7 +33,7 @@ git clone https://github.com/cxcxy/dayun-sticker-tutorial-video.git
 ln -s "$PWD/dayun-sticker-tutorial-video" ~/.claude/skills/dayun-sticker-tutorial-video
 ```
 
-Codex 等其他 Agent 同理，链接到各自的 skills 目录。之后对 Agent 说“用 Muse 那期的风格做一期 XX 教程”即可触发。
+Codex 等其他 Agent 同理，链接到各自的 skills 目录。之后对 Agent 说“用贴纸风做一期 XX 零基础教程”即可触发。
 
 ## 依赖
 
@@ -44,5 +44,5 @@ Codex 等其他 Agent 同理，链接到各自的 skills 目录。之后对 Agen
 
 ## 说明
 
-- 范例里的 Muse 界面截图只用于展示风格；Muse 是 Meta 的产品。
-- 本仓库是从 DY-AI 技能库拆出的独立副本，两边会分别维护。
+- 样张和范例中出现的第三方产品界面只用于展示风格，相关商标归各自所有者。
+- 本仓库与作者 DY-AI 技能库中的同名 Skill 内容保持一致。

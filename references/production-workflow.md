@@ -5,7 +5,7 @@
 ## 0. 准备工程
 
 1. 复制组件库：`rsync -a --exclude .git --exclude node_modules <dy-video-kit> PRJ/`（用户仓库 `cxcxy/dy-video-kit`；本机已有克隆就用本机的，没有就 `gh repo clone`）。
-2. 新建 `PRJ/src/ep/`，复制 `SKILL/assets/template/parts.tsx`，参照 `SKILL/assets/example/MuseEpisode.tsx` 写当期 `Episode.tsx`，在 `Root.tsx` 的“成片”文件夹注册。
+2. 新建 `PRJ/src/ep/`，复制 `SKILL/assets/template/parts.tsx`，参照 `SKILL/assets/example/ExampleEpisode.tsx` 写当期 `Episode.tsx`，在 `Root.tsx` 的“成片”文件夹注册。
 3. `npm i`。不改 `src/lib/` 和 `episode.ts`、`channel.ts`（片头内容是用户的）。
 
 ## 1. 文稿与配音
@@ -44,7 +44,7 @@
 
 - 场景边界对齐句子边界；元素出现时间对齐关键词时间（相对场景开始的秒）。
 - 录屏场景用 `Shots`，每个镜头 `[开始, 结束, s(clip, 源秒, 速度, 关键帧, 模糊区)]`。录屏比口播短就降速（0.15–0.8），长就截取。
-- 私人内容（对话列表、历史记录、和用户工作相关的条目）一律放进 `blur`；Muse 主窗口的旁聊列表区是 `[195, 262, 440, 610]`。
+- 私人内容（对话列表、历史记录、和用户工作相关的条目）一律放进 `blur`；例如聊天类应用左侧的对话列表（2150×1600 源画面里约为 `[195, 262, 440, 610]`），以缩略拼图实测为准。
 
 ## 6. 预览与验收
 

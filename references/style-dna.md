@@ -1,6 +1,6 @@
 # 风格基因：手绘贴纸风软件教程
 
-来源：2026-10-16《Muse 零基础教程》第 01 期成片（样张见 `../assets/example/style-sheet.jpg`）。组件与配色全部来自用户的 dy-video-kit 仓库（`src/lib/`），本文件只记录“怎么组合”，数值以组件库 `theme.ts` 为准；组件库改了配色，就跟着组件库走。
+样张见 `../assets/example/style-sheet.jpg`。组件与配色全部来自用户的 dy-video-kit 仓库（`src/lib/`），本文件只记录“怎么组合”，数值以组件库 `theme.ts` 为准；组件库改了配色，就跟着组件库走。
 
 ## 一句话
 

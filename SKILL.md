@@ -1,13 +1,13 @@
 ---
 name: dayun-sticker-tutorial-video
-description: 用大昀《Muse 零基础教程》同款手绘贴纸风制作横版软件教程视频：dy-video-kit 组件 C 开场，米白噪点纸底，黄紫立体贴纸字，粗描边硬投影的录屏卡里推近拉远，白底黑边逐句字幕，真实操作软件录屏并模糊私人内容。用户说“用 Muse 那期的风格”“贴纸风”“组件 C 风格”“同样的风格做一期教程”“零基础教程视频”“软件实操录屏讲解”，或要复用这套视觉做新一期时使用。不用于竖版口播清剪、纯动画科普或没有录屏的观点视频。
+description: 用大昀手绘贴纸风制作横版软件教程视频：dy-video-kit 组件 C 开场，米白噪点纸底，黄紫立体贴纸字，粗描边硬投影的录屏卡里推近拉远，白底黑边逐句字幕，真实操作软件录屏并模糊私人内容。用户说“贴纸风教程”“手绘贴纸风”“组件 C 风格”“同样的风格做一期教程”“零基础教程视频”“软件实操录屏讲解”，或要复用这套视觉做新一期时使用。不用于竖版口播清剪、纯动画科普或没有录屏的观点视频。
 ---
 
 # 大昀手绘贴纸风教程视频
 
 ## 使用场景
 
-- 做一款软件、App 或 AI 工具的横版教程视频，需要真实操作录屏 + 板书讲解，并沿用 Muse 第 01 期的视觉。
+- 做一款软件、App 或 AI 工具的横版教程视频，需要真实操作录屏 + 板书讲解，并沿用这套手绘贴纸视觉。
 - 在同一风格下改版、续期，或只复用其中一环（窗口录屏、字幕对齐、静帧检查、切块上传 GitHub）。
 - 不适用：竖版、真人出镜口播剪辑（用 `talking-head-recut`）、无录屏的纯动画科普（用 `dayun-featured-video` 等）。用户指定了别的风格或技术栈时，以用户为准。
 
@@ -20,7 +20,7 @@ description: 用大昀《Muse 零基础教程》同款手绘贴纸风制作横�
 ## 执行流程
 
 1. 读 `references/style-dna.md` 定视觉，读 `references/production-workflow.md` 按步骤做；遇到异常先查 `references/pitfalls.md`。
-2. 在 `~/Desktop/抖音视频/YYYY-MM-DD_HH-mm_主题/` 建当期目录；复制用户的 dy-video-kit 到 `成片工程/`，把 `assets/template/parts.tsx` 放进 `src/ep/`，参照 `assets/example/MuseEpisode.tsx` 写当期合成并在 `Root.tsx` 注册。片头内容沿用 `episode.ts`、`channel.ts`，不擅自改。
+2. 在 `~/Desktop/抖音视频/YYYY-MM-DD_HH-mm_主题/` 建当期目录；复制用户的 dy-video-kit 到 `成片工程/`，把 `assets/template/parts.tsx` 放进 `src/ep/`，参照 `assets/example/ExampleEpisode.tsx` 写当期合成并在 `Root.tsx` 注册。片头内容沿用 `episode.ts`、`channel.ts`，不擅自改。
 3. 定稿并生成配音，实测时长。
 4. 用 `scripts/rec.sh` 逐个功能、逐个任务录目标窗口；只录窗口，不录全屏。不登录、不过验证码、不付款；批准卡、发送、定时任务先问用户。
 5. 录屏转 30fps 恒定帧率；用 `scripts/contact_sheets.sh` 找时间点、记源尺寸。
@@ -38,6 +38,6 @@ description: 用大昀《Muse 零基础教程》同款手绘贴纸风制作横�
 
 ## 示例
 
-用户：“下周做一期 Claude 桌面版零基础教程，风格和 Muse 那期一样。”
+用户：“下周做一期 Claude 桌面版零基础教程，用贴纸风。”
 
 交付：当期目录下的逐字稿与配音；Claude 桌面版逐功能、逐任务的窗口录屏；组件 C 开场，后接三段式正文（怎么用、全部功能、实操）的贴纸风成片；制作记录列出录屏清单、模糊处理、示意图段落和仍在运行的任务；需要时附私有 GitHub 仓库链接和还原步骤。

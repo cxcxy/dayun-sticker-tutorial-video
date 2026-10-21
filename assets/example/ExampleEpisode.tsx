@@ -1,3 +1,4 @@
+// 范例：一期完整的横版软件教程（贴纸风），写新一期时照着改场景表、镜头和文案
 import React from "react";
 import { AbsoluteFill, Audio, Sequence, staticFile, useCurrentFrame } from "remotion";
 import { channel } from "../channel";
@@ -26,8 +27,11 @@ import {
   type Shot,
 } from "./parts";
 
-export const MUSE_END = 327.2; // 秒
-export const MUSE_FRAMES = f(MUSE_END);
+// 当期讲解的产品名：画面文字统一从这里取
+const PRODUCT = "产品名";
+
+export const EP_END = 327.2; // 秒
+export const EP_FRAMES = f(EP_END);
 
 // ===== 源视频尺寸与隐私遮挡 =====
 const W = 2150;
@@ -262,7 +266,7 @@ const SCENES: Scene[] = [
         </Panel>
         <Panel x={1050} y={250} w={700} h={520} at={4.6} rotate={1.5}>
           <Pill fontSize={38} shadowColor={C.green}>
-            Muse
+            {PRODUCT}
           </Pill>
           <Cloud scale={0.9}>
             <Body size={40}>云端接着干</Body>
@@ -330,9 +334,9 @@ const SCENES: Scene[] = [
       <>
         <Title at={0} text="第一步：【怎么用】" y={110} size={110} />
         <div style={{ position: "absolute", left: 0, right: 0, top: 420, display: "flex", justifyContent: "center", alignItems: "center", gap: 30 }}>
-          <StepTag at={1.1} text="打开 Muse 官网" />
+          <StepTag at={1.1} text={`打开 ${PRODUCT} 官网`} />
           <ArrowPop at={2.3} />
-          <StepTag at={2.6} text="点右上角 Try Muse" />
+          <StepTag at={2.6} text="点右上角的登录入口" />
           <ArrowPop at={3.9} />
           <StepTag at={4.2} text="Meta 账号登录" />
         </div>
@@ -719,7 +723,7 @@ const SCENES: Scene[] = [
     el: (
       <>
         <Title at={0.1} text="【Codex】帮你把工作干完" y={110} size={104} />
-        <Title at={3.0} text="【Muse】帮你把生活盯住" y={260} size={104} />
+        <Title at={3.0} text={`【${PRODUCT}】帮你把生活盯住`} y={260} size={104} />
         <Chips
           y={520}
           fontSize={58}
@@ -735,10 +739,10 @@ const SCENES: Scene[] = [
   // AB 结尾
   {
     a: 310.05,
-    b: MUSE_END,
+    b: EP_END,
     el: (
       <>
-        <Title at={0.1} text="【Muse】零基础教程 · 完" y={100} size={104} />
+        <Title at={0.1} text={`【${PRODUCT}】零基础教程 · 完`} y={100} size={104} />
         <Bot cx={960} bottom={900} scale={0.85} eyes="happy" />
         <BubbleAt at={4.55} x={1150} y={330} rotate={4} text="卡在哪一步？评论区告诉我" />
         <Pop at={11.9} x={300} y={420} rotate={-6}>
@@ -752,11 +756,11 @@ const SCENES: Scene[] = [
 ];
 
 // ===== 整期 =====
-export const MuseEpisode: React.FC = () => {
+export const ExampleEpisode: React.FC = () => {
   const openingEnd = OPENING_C_FRAMES;
   return (
     <AbsoluteFill style={{ backgroundColor: C.paper }}>
-      <Sequence from={openingEnd} durationInFrames={MUSE_FRAMES - openingEnd}>
+      <Sequence from={openingEnd} durationInFrames={EP_FRAMES - openingEnd}>
         <PaperBackground />
         <Sparkles />
       </Sequence>
